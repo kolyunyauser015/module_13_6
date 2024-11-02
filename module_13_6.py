@@ -68,7 +68,7 @@ async def set_weight(message, state):
 async def send_colories(message, state):
     await state.update_data(third=message.text)
     data = await state.get_data()
-    calc_colories = 10 * int(data['first']) + 6.25 * int(data['second']) + 5 * int(data['third'])
+    calc_colories = 10 * int(data['first']) + 6.25 * int(data['second']) + 5 * int(data['third']) + 5
     await message.answer(f"Ваша норма калорий: {calc_colories}")
     await state.finish()
 
